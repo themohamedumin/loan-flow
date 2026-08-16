@@ -1,0 +1,383 @@
+/* =========================================
+   MY LOANS PAGE
+========================================= */
+
+.myloans-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #172033;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.myloans-navbar {
+    height: 72px;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.myloans-logo {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.myloans-back {
+    border: none;
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.myloans-back:hover {
+    color: #1d4ed8;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.myloans-container {
+    width: min(1100px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding: 40px 0 60px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.myloans-header {
+    margin-bottom: 28px;
+}
+
+.myloans-header h1 {
+    margin: 0 0 8px;
+
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.myloans-header p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   LOAN CARD
+========================================= */
+
+.loan-card {
+    margin-bottom: 18px;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow:
+            0 2px 6px rgba(16, 24, 40, 0.04);
+
+    transition:
+            box-shadow 0.2s ease,
+            transform 0.2s ease;
+}
+
+.loan-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+            0 6px 18px rgba(16, 24, 40, 0.08);
+}
+
+
+/* =========================================
+   LOAN HEADER
+========================================= */
+
+.loan-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.loan-card-title {
+    margin: 0;
+
+    font-size: 19px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.loan-status {
+    display: inline-flex;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.loan-status-pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.loan-status-approved {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+.loan-status-rejected {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.loan-status-paid {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+
+/* =========================================
+   LOAN INFORMATION
+========================================= */
+
+.loan-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #eaecf0;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.loan-info-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.loan-info-label {
+    color: #667085;
+
+    font-size: 13px;
+}
+
+.loan-info-value {
+    color: #172033;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   LOAN FOOTER
+========================================= */
+
+.loan-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+.loan-balance {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.loan-balance-label {
+    color: #667085;
+
+    font-size: 13px;
+}
+
+.loan-balance-value {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.loan-view-btn {
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 16px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.loan-view-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.myloans-empty {
+    padding: 70px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.myloans-empty h2 {
+    margin: 0 0 10px;
+
+    font-size: 22px;
+}
+
+.myloans-empty p {
+    margin: 0 0 24px;
+
+    color: #667085;
+}
+
+.myloans-apply-btn {
+    border: none;
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.myloans-error {
+    padding: 16px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .myloans-navbar {
+        padding: 0 20px;
+    }
+
+    .myloans-container {
+        width: calc(100% - 30px);
+
+        padding-top: 25px;
+    }
+
+    .loan-info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .myloans-header h1 {
+        font-size: 27px;
+    }
+
+    .loan-card {
+        padding: 20px;
+    }
+
+    .loan-card-header {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .loan-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .loan-card-footer {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+    }
+
+    .loan-view-btn {
+        width: 100%;
+    }
+}

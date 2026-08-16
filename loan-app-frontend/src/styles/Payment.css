@@ -1,0 +1,554 @@
+/* =========================================
+   PAYMENT PAGE
+========================================= */
+
+.payment-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+    color: #111827;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.payment-navbar {
+    height: 72px;
+    padding: 0 7%;
+
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.payment-nav-back {
+    padding: 10px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: white;
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.payment-nav-back:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.payment-container {
+    width: min(900px, 90%);
+    margin: auto;
+
+    padding: 50px 0 70px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.payment-header {
+    margin-bottom: 30px;
+}
+
+.payment-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.payment-header h1 {
+    margin: 0;
+
+    font-size: 38px;
+    letter-spacing: -1px;
+}
+
+.payment-header p {
+    margin: 10px 0 0;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   LOAN SUMMARY
+========================================= */
+
+.payment-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.payment-summary-item {
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.payment-summary-item span {
+    color: #6b7280;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.payment-summary-item strong {
+    color: #111827;
+
+    font-size: 20px;
+    letter-spacing: -0.3px;
+}
+
+.payment-summary-highlight {
+    background: #111827;
+    border-color: #111827;
+}
+
+.payment-summary-highlight span {
+    color: #9ca3af;
+}
+
+.payment-summary-highlight strong {
+    color: white;
+}
+
+
+/* =========================================
+   PAYMENT CARD
+========================================= */
+
+.payment-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 32px;
+
+    box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.035);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.payment-form {
+    max-width: 560px;
+    margin: auto;
+}
+
+.payment-form-header {
+    margin-bottom: 22px;
+}
+
+.payment-form-header h2 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+}
+
+.payment-form-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PAYMENT INPUT
+========================================= */
+
+.payment-input-wrapper {
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: border 0.15s;
+}
+
+.payment-input-wrapper:focus-within {
+    border-color: #111827;
+}
+
+.payment-currency {
+    padding-left: 17px;
+
+    color: #6b7280;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.payment-input-wrapper input {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 15px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #111827;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.payment-input-wrapper input::placeholder {
+    color: #d1d5db;
+}
+
+
+/* Remove number arrows */
+
+.payment-input-wrapper input::-webkit-outer-spin-button,
+.payment-input-wrapper input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.payment-input-wrapper input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+
+/* =========================================
+   PAYMENT LIMIT
+========================================= */
+
+.payment-limit {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 22px;
+
+    font-size: 12px;
+}
+
+.payment-limit span {
+    color: #9ca3af;
+}
+
+.payment-limit strong {
+    color: #374151;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.payment-submit {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #111827;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.payment-submit:hover:not(:disabled) {
+    background: #000;
+    transform: translateY(-1px);
+}
+
+.payment-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.payment-success {
+    padding: 14px 16px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #a7f3d0;
+    border-radius: 9px;
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.payment-error {
+    padding: 14px 16px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+
+    background: #fef2f2;
+
+    color: #991b1b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FULLY PAID
+========================================= */
+
+.payment-paid {
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+.payment-paid-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 17px;
+
+    border-radius: 50%;
+
+    background: #10b981;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.payment-paid h2 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+}
+
+.payment-paid p {
+    margin: 0 0 22px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.payment-back-btn {
+    padding: 11px 17px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: white;
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.payment-back-btn:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   SECURITY MESSAGE
+========================================= */
+
+.payment-security {
+    margin: 20px 0 0;
+
+    color: #9ca3af;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.payment-loading {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ERROR PAGE
+========================================= */
+
+.payment-error-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.payment-error-page h1 {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .payment-navbar {
+        padding: 0 5%;
+    }
+
+
+    .payment-container {
+        width: 92%;
+
+        padding: 35px 0 50px;
+    }
+
+
+    .payment-header h1 {
+        font-size: 30px;
+    }
+
+
+    .payment-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .payment-summary-item {
+        padding: 17px;
+    }
+
+
+    .payment-summary-item strong {
+        font-size: 18px;
+    }
+
+
+    .payment-card {
+        padding: 24px 18px;
+    }
+
+
+    .payment-nav-back {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .payment-logo {
+        font-size: 20px;
+    }
+
+}
