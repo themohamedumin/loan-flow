@@ -3,6 +3,7 @@ package com.loanapp.loanapp.security;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
@@ -16,8 +17,8 @@ public class JwtService {
     // JWT CONFIGURATION
     // ==========================================
 
-    private static final String SECRET =
-            "my-super-secret-key-for-loan-app-jwt-token-2026";
+    @Value("${jwt.secret}")
+    private String secret;
 
     private static final long EXPIRATION_TIME =
             24 * 60 * 60 * 1000L; // 24 hours
@@ -27,10 +28,12 @@ public class JwtService {
     // SECRET KEY
     // ==========================================
 
-    private final SecretKey key =
-            Keys.hmacShaKeyFor(
-                    SECRET.getBytes(StandardCharsets.UTF_8)
-            );
+    private SecretKey getKey() {
+
+        return Keys.hmacShaKeyFor(
+                secret.getBytes(StandardCharsets.UTF_8)
+        );
+    }
 
 
     // ==========================================
@@ -60,7 +63,7 @@ public class JwtService {
                 .expiration(expiration)
 
                 // Sign token
-                .signWith(key)
+                .signWith(getKey())
 
                 // Build token
                 .compact();
@@ -76,7 +79,7 @@ public class JwtService {
         return Jwts.parser()
 
                 // Verify token signature
-                .verifyWith(key)
+                .verifyWith(getKey())
 
                 .build()
 
